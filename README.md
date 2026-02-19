@@ -1,13 +1,21 @@
-# 🤖 Discord Bot (Docker + Unraid Ready)
+# 🤖 Discord Bot
 
-A simple **Discord.js bot** packaged as a Docker container with a built-in Web UI for monitoring and restart control.
+### Docker + Unraid Ready
 
-Designed for:
+A lightweight **Discord.js bot container** with a built-in Web UI for monitoring status and restarting the bot.
 
-- 🐳 Docker users  
-- 📦 Unraid users  
-- 🖥️ Self-hosters  
-- 🧪 Homelabs  
+Designed for homelabs, self-hosters and automation setups.
+
+---
+
+## 🚀 Features
+
+* 🔌 Runs anywhere Docker runs
+* 📊 Web dashboard status page
+* 🔁 Restart button in browser
+* 🔐 Token via environment variable
+* 🐳 Lightweight container image
+* 🧱 Unraid template included
 
 ---
 
@@ -19,23 +27,32 @@ Pull manually:
 
 ```bash
 docker pull thalf/discord-bot:latest
-🚀 Quick Start (Docker)
-Run container:
+```
 
+---
+
+## ⚡ Quick Start (Docker)
+
+```bash
 docker run -d \
   --name discord-bot \
   --restart unless-stopped \
   -e DISCORD_TOKEN=YOUR_TOKEN \
   -p 3000:3000 \
   thalf/discord-bot:latest
+```
+
 Open Web UI:
 
+```
 http://localhost:3000
-🧩 Docker Compose
-Create file:
+```
 
-docker-compose.yml
+---
 
+## 🧩 Docker Compose
+
+```yaml
 version: "3.9"
 
 services:
@@ -47,43 +64,79 @@ services:
       - "3000:3000"
     environment:
       DISCORD_TOKEN: YOUR_TOKEN
+```
+
 Start:
 
+```bash
 docker compose up -d
-🖥️ Web UI Features
+```
+
+---
+
+## 📊 Web Panel
+
 The built-in panel shows:
 
-Connection status
+* Connection status
+* Uptime
+* Guild count
+* Ready time
+* Restart button
 
-Uptime
+---
 
-Guild count
+## 🔧 Environment Variables
 
-Ready time
+| Variable      | Required | Description                  |
+| ------------- | -------- | ---------------------------- |
+| DISCORD_TOKEN | ✅        | Your Discord bot token       |
+| PORT          | ❌        | Web UI port (default: 3000)  |
+| WEB_KEY       | ❌        | Optional password for Web UI |
 
-Restart button
+---
 
-🧠 Environment Variables
-Variable	Required	Description
-DISCORD_TOKEN	✅	Your Discord bot token
-PORT	❌	Web UI port (default: 3000)
-WEB_KEY	❌	Optional password for Web UI
-📦 Unraid Install
-If you added the XML template:
+## 🧱 Unraid Support
 
-Go to Apps
+This repository includes an **Unraid XML template** for easy installation.
 
-Search discord-bot
+Once approved, it will (hopefully 🤞) be available directly inside:
 
-Click install
+**Unraid → Apps → Search → discord-bot**
 
-Paste token
+Until then, you can install it manually using the template file inside:
 
-Start container
+```
+/unraid/discord-bot.xml
+```
 
-Done 🎉
+---
 
-🔐 Security Tips
-Never share your token publicly.
+## ☕ Support the Project
 
-If leaked → regenerate immediately in Discord Developer Portal.
+If you like this project and want to support development:
+
+👉 https://buymeacoffee.com/THALF
+
+---
+
+## 🔐 Security Notice
+
+Never share your Discord bot token publicly.
+
+If your token leaks:
+→ Regenerate it immediately in Discord Developer Portal.
+
+---
+
+## 📜 License
+
+MIT License
+
+---
+
+## ❤️ Credits
+
+Created and maintained by **thalf**
+
+Built for the self-hosting community.
