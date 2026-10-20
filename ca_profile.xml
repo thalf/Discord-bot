@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CommunityApplications>
+  <Profile>
+    Discord Bot is a lightweight, self-hosted Discord.js bot
+    designed for Docker and Unraid.
+
+    The container provides a simple starting point for hosting
+    a Discord bot, with a built-in web interface for monitoring
+    its status, uptime, and connected servers.
+
+    Features include Discord bot connectivity, environment-based
+    token configuration, a web dashboard, and restart controls.
+
+    This repository is maintained by THALF.
+    For support, bug reports, or feature requests, please visit
+    the GitHub repository.
+  </Profile>
+
+  <Icon>https://avatars.githubusercontent.com/u/191984982?v=4</Icon>
+  <WebPage>https://github.com/thalf/Discord-bot</WebPage>
+
+  <DonateLink>https://buymeacoffee.com/THALF</DonateLink>
+  <DonateText>Support the project</DonateText>
+</CommunityApplications>
