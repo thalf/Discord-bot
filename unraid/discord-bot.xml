@@ -7,7 +7,7 @@
 
   <Category>Tools: Utilities</Category>
   <Project>Discord Bot</Project>
-  <Overview>Discord.js bot container. Set DISCORD_TOKEN to start. Optional Web UI on port 3000.</Overview>
+  <Overview>Discord.js bot container. Set DISCORD_TOKEN and a WEB_KEY of at least 24 characters. Sign in to the Web UI as admin. Keep the panel on a trusted network.</Overview>
 
   <Support>https://github.com/thalf/Discord-bot</Support>
   <Registry>https://hub.docker.com/r/thalf/discord-bot</Registry>
@@ -24,6 +24,17 @@
           Display="always"
           Required="true"
           Mask="true" />
+
+  <Config Name="Web Panel Password"
+          Target="WEB_KEY"
+          Default=""
+          Description="Required: at least 24 characters. Web UI username is admin."
+          Type="Variable" Display="always" Required="true" Mask="true" />
+  <Config Name="Listen Address"
+          Target="HOST"
+          Default="0.0.0.0"
+          Description="Container listen address"
+          Type="Variable" Display="advanced" Required="true" />
 
   <Config Name="Web UI Port"
           Target="3000"
