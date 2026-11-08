@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "discord.js": "^14.28.1",
-    "dotenv": "^16.6.1",
+    "dotenv": "^18.0.9",
     "express": "^5.2.1"
   },
   "description": "Self-hosted Discord ping bot with an authenticated status and restart panel.",
