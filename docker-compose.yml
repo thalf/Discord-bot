@@ -1,7 +1,16 @@
 services:
   bot:
-    image: discord-bot:latest
-    container_name: discord-bot
-    env_file:
-      - .env
+    build: .
+    image: thalf/discord-bot:local
     restart: unless-stopped
+    init: true
+    env_file: .env
+    environment:
+      HOST: 0.0.0.0
+      PORT: 3000
+    ports:
+      - "127.0.0.1:3000:3000"
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
